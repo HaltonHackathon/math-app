@@ -1,40 +1,46 @@
-import java.awt.Graphics;
-import java.awt.Point;
+import org.jfree.chart.ChartPanel;
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.JFreeChart;
+import org.jfree.ui.ApplicationFrame;
+import org.jfree.ui.RefineryUtilities;
+import org.jfree.chart.plot.PlotOrientation;
+import org.jfree.data.category.DefaultCategoryDataset;
 
-public class Graph {
-	private Point[] points;
-	private double startPoint;
-	private double horizontal;
-	private double vertical;
-	
-	public Graph(){
-		points = new Point[10];
-		startPoint = 0;
-		horizontal = 0;
-		vertical = 0;
+public class Graph extends ApplicationFrame
+{
+	private double startPoint = 10;
+	private double rate = 0.1;
+
+	public Graph( String applicationTitle , String chartTitle )
+	{
+		super(applicationTitle);
+		JFreeChart lineChart = ChartFactory.createLineChart(
+				chartTitle,
+				"Years","Number of Bunnies",
+				createDataset(),
+				PlotOrientation.VERTICAL,
+				true,true,false);
+
+		ChartPanel chartPanel = new ChartPanel( lineChart );
+		chartPanel.setPreferredSize( new java.awt.Dimension( 560 , 367 ) );
+		setContentPane( chartPanel );
 	}
-	
-	public Graph(double startPoint, double horizontal, double vertical){
-		for(int i = 0; i < 10; i++){
-			double x, y;
-			x = i;
-			y = Math.pow(startPoint,i-horizontal) + vertical;
-			Point z = new Point();
-			z.setLocation(x,y);
-			points[i] = z;
-		}
+
+	private DefaultCategoryDataset createDataset( )
+	{
+		DefaultCategoryDataset dataset = new DefaultCategoryDataset( );
+		for(int i = 0; i < 20; i++)
+			dataset.addValue( startPoint*Math.pow(1+rate,i), "bunnies", Integer.toString(i));
+		return dataset;
 	}
-	
-	public void paint(Graphics g){
-//      (  x,  y,  w,  h);
-		g.drawLine(  0,200,400,200);
-		g.drawLine(200,  0,200,400);
-		
-		for(int i = 0; i < 10; i++)
-			g.drawOval( i*25 , i*25 , 400 - (i*50) , 400 - (i*50) );
-	}
-	
-	public static void main(String[] args){
-		Graph x = new Graph();
+	public static void main( String[ ] args ) 
+	{
+		Graph chart = new Graph(
+				"Bunnies Vs Years" ,
+				"Numer of Bunnies vs Years");
+
+		chart.pack( );
+		RefineryUtilities.centerFrameOnScreen( chart );
+		chart.setVisible( true );
 	}
 }
