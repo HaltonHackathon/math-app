@@ -21,22 +21,22 @@ public class mainClass extends JApplet implements ComponentListener{
 	
 	protected JPanel graph = new JPanel(), value = new JPanel(), buttons = new JPanel();
 	
+	
+	protected JButton reset = new JButton("Reset"), apply = new JButton("Apply Changes");
+	
 	Toolkit tk = Toolkit.getDefaultToolkit();
 	protected static Dimension d;
 	
 	
 	protected void setDim(){
-		d = new Dimension(800, 800);
+		d = new Dimension(800, 600);
 		graph.setBounds(0, 0, (int)d.getWidth(), (int)d.getHeight()*2/3);
 		value.setBounds( 0, (int)d.getHeight()*2/3, (int)d.getWidth()/2, (int)d.getHeight()/3);
 		buttons.setBounds((int)d.getWidth()/2, (int)d.getHeight()*2/3, (int) d.getWidth()/2, (int)d.getHeight()/3 );
-	}
-	protected void setDim(double height, double width){
-		graph.setBounds(0, 0, (int)width, (int)height*2/3);
-		value.setBounds( 0, (int)height*2/3, (int)width/2, (int)height/3);
-		buttons.setBounds((int)width/2, (int)height*2/3, (int) width/2, (int)height/3 );
+		
 		
 	}
+	
 	
 	
 	public void init(){
@@ -48,14 +48,11 @@ public class mainClass extends JApplet implements ComponentListener{
 			main.add(buttons);
 			main.setLayout(null);
 			
+			buttons.add(apply);
+			buttons.add(reset);
 			
-			graph.setBackground(Color.BLUE);
-			value.setBackground(Color.GREEN);
-			buttons.setBackground(Color.RED);	
 			
-			graph.setOpaque(true);
-			value.setOpaque(true);
-			buttons.setOpaque(true);
+			
 			
 			graph.setVisible(true);
 			value.setVisible(true);
@@ -65,32 +62,6 @@ public class mainClass extends JApplet implements ComponentListener{
 			setDim();
 			
 			
-			main.addComponentListener(new ComponentListener(){
-				public void componentResized(ComponentEvent e){
-					double height = main.getHeight();
-					double width = main.getWidth();
-					setDim(height, width);
-				}
-
-				@Override
-				public void componentMoved(ComponentEvent e) {
-					// TODO Auto-generated method stub
-					
-				}
-
-				@Override
-				public void componentShown(ComponentEvent e) {
-					// TODO Auto-generated method stub
-					repaint();
-				}
-
-				@Override
-				public void componentHidden(ComponentEvent e) {
-					// TODO Auto-generated method stub
-					
-				}
-			});
-			repaint();
 	}
 	
 	public void paint (Graphics g){
