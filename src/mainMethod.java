@@ -4,13 +4,12 @@ import java.awt.*;
 import javax.swing.*;
 
 public class mainMethod extends JApplet {
-	protected JButton b1 = new JButton("Hello World!");
+	protected JPanel graph = new JPanel(), value = new JPanel(), buttons = new JPanel();
 	
 	public void init(){
 			Container main = getContentPane();
 			main.setLayout(null);;
-			b1.setBounds(300, 100, 100, 100);
-			main.add(b1);
+			
 			
 		
 	}
