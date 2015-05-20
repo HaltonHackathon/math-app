@@ -48,6 +48,8 @@ public class mainClass extends JApplet implements ComponentListener{
 			main.add(buttons);
 			main.setLayout(null);
 			
+			
+			
 			buttons.add(apply);
 			buttons.add(reset);
 			
