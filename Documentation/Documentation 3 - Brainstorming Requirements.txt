@@ -9,5 +9,6 @@ Would Improve Software:
 1. Easy to use GUI
 2. Automatic and uniform scaling at 4:3 ratio
 3. <2 Visual representations of the data
+4. Option to display table of values beside graph
 
 *Since we are coding in Java, it will be compatible with most OSs automatically
