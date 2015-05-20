@@ -11,6 +11,9 @@ import java.awt.event.*;
 
 import javax.swing.*;
 
+import org.jfree.chart.ChartPanel;
+import org.jfree.ui.RefineryUtilities;
+
 public class mainClass extends JApplet implements ComponentListener{
 	
 	public mainClass(){
@@ -20,7 +23,6 @@ public class mainClass extends JApplet implements ComponentListener{
 	
 	
 	protected JPanel graph = new JPanel(), value = new JPanel(), buttons = new JPanel();
-	
 	
 	protected JButton reset = new JButton("Reset"), apply = new JButton("Apply Changes");
 	
@@ -71,7 +73,6 @@ public class mainClass extends JApplet implements ComponentListener{
 	
 	
 	public static void main (String[] args){
-
 	    run(new mainClass(), d.width, d.height);
 	}
 	
