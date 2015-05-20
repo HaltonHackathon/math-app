@@ -13,9 +13,6 @@ public class test extends JFrame implements ActionListener{
 	TextArea entryBox = new TextArea();
 	
 	JButton addButton = new JButton("Add Entries");
-	JButton removeButton = new JButton("Remove Entries");
-	JButton editButton = new JButton("Edit Entries");
-	JButton sortButton = new JButton("Sort Entries");
 	
 	public test ( String title ) throws IOException{
 		super( title );
@@ -26,17 +23,11 @@ public class test extends JFrame implements ActionListener{
 		add(entryBox);
 		
 		add(addButton);
-		add(editButton);
-		add(removeButton);
-		add(sortButton);
 		
 		entryLabel.setFont(entryLabel.getFont().deriveFont(Font.BOLD, 32.0f));
 		entryBox.setEditable(false);
 		
 		addButton.addActionListener(this);
-		editButton.addActionListener(this);
-		removeButton.addActionListener(this);
-		sortButton.addActionListener(this);
 		
 		setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
 	}
@@ -44,7 +35,7 @@ public class test extends JFrame implements ActionListener{
 	public static void run() throws IOException{
 		test frame  = new test( "Home" );
 	    
-   		frame.setSize( 475, 305 );
+   		frame.setSize( 800, 600 );
     	frame.setVisible(true);  
 //    	frame.setResizable(false);
 	}
@@ -53,5 +44,9 @@ public class test extends JFrame implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		
+	}
+	
+	public static void main(String[] args) throws IOException{
+		run();
 	}
 }
