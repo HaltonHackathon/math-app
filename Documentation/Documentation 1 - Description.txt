@@ -1,0 +1,1 @@
+Our software displays visual representations of an exponential function input by the user. This program is intended to help grade 11 students learn more about exponential functions by allowing them to manipulate the variables in the equation, and see the resulting graph immediately.
