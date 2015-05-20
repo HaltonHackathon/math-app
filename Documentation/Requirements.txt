@@ -4,4 +4,7 @@
 4. Updates graph live as changes are made
 5. Other visual representations of the data
 6. Ability to update aspects of the function
-7. 
+7. *Multi-platform compatibility
+8.
+
+*Since we are coding in Java, it will be compatible with most OSs automatically
