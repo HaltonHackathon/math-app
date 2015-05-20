@@ -8,8 +8,10 @@ public class mainMethod extends JApplet {
 	
 	public void init(){
 			Container main = getContentPane();
-			main.setLayout(new FlowLayout());
+			main.setLayout(null);;
+			b1.setBounds(300, 100, 100, 100);
 			main.add(b1);
+			
 		
 	}
 	public void paint (Graphics g){
