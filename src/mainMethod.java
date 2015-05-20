@@ -15,6 +15,7 @@ public class mainMethod extends JApplet {
 			main.add(buttons);
 		
 	}
+	
 	public void paint (Graphics g){
 		
 	}
