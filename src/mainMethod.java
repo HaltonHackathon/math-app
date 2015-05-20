@@ -21,7 +21,9 @@ public class mainMethod extends JApplet implements ComponentListener{
 		buttons.setBounds((int)d.getWidth()/2, (int)d.getHeight()*2/3, (int) d.getWidth()/2, (int)d.getHeight()/3 );
 	}
 	protected void setDim(double height, double width){
-		
+		graph.setBounds(0, 0, (int)width, (int)height*2/3);
+		value.setBounds( 0, (int)height*2/3, (int)width/2, (int)height/3);
+		buttons.setBounds((int)width/2, (int)height*2/3, (int) width/2, (int)height/3 );
 		
 	}
 	
@@ -32,11 +34,15 @@ public class mainMethod extends JApplet implements ComponentListener{
 			main.add(value);
 			main.add(buttons);
 			main.setLayout(null);
-
+			
 			
 			graph.setBackground(Color.BLUE);
 			value.setBackground(Color.GREEN);
 			buttons.setBackground(Color.RED);
+			
+			graph.setVisible(true);
+			value.setVisible(true);
+			buttons.setVisible(true);
 			setDim();
 
 			
@@ -92,6 +98,7 @@ public class mainMethod extends JApplet implements ComponentListener{
 	    applet.init();
 	    applet.start();
 	    frame.setVisible(true);
+	    
 	}
 
 
