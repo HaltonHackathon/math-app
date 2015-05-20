@@ -50,6 +50,10 @@ public class mainClass extends JApplet implements ComponentListener{
 			main.add(buttons);
 			main.setLayout(null);
 			
+			value.setLayout(new CardLayout());
+			
+			
+			
 			buttons.add(apply);
 			buttons.add(reset);
 			
@@ -62,6 +66,24 @@ public class mainClass extends JApplet implements ComponentListener{
 			
 			
 			setDim();
+			
+			
+			apply.addActionListener(new ActionListener() {
+				public void actionPerformed (ActionEvent e){
+		
+				}
+			});
+			
+			reset.addActionListener(new ActionListener() {
+				public void actionPerformed (ActionEvent e){
+			
+				}
+
+				
+
+				
+
+			});
 			
 			
 	}
