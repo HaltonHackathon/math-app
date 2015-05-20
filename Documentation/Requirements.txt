@@ -1,5 +1,5 @@
 1. Easy to use GUI
-2. Uniform scaling at 4:3 ratio
+2. Automatic uniform scaling at 4:3 ratio
 3. Reset Button
 4. Updates graph live as changes are made
 5. Other visual representations of the data
