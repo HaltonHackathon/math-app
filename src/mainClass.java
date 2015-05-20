@@ -15,6 +15,7 @@ public class mainClass extends JApplet implements ComponentListener{
 	
 	public mainClass(){
 		setDim();
+		repaint();
 	}
 	
 	
@@ -25,7 +26,7 @@ public class mainClass extends JApplet implements ComponentListener{
 	
 	
 	protected void setDim(){
-		d = new Dimension(1280, 800);
+		d = new Dimension(800, 800);
 		graph.setBounds(0, 0, (int)d.getWidth(), (int)d.getHeight()*2/3);
 		value.setBounds( 0, (int)d.getHeight()*2/3, (int)d.getWidth()/2, (int)d.getHeight()/3);
 		buttons.setBounds((int)d.getWidth()/2, (int)d.getHeight()*2/3, (int) d.getWidth()/2, (int)d.getHeight()/3 );
@@ -62,7 +63,7 @@ public class mainClass extends JApplet implements ComponentListener{
 			
 			
 			setDim();
-			repaint();
+			
 			
 			main.addComponentListener(new ComponentListener(){
 				public void componentResized(ComponentEvent e){
@@ -89,10 +90,11 @@ public class mainClass extends JApplet implements ComponentListener{
 					
 				}
 			});
+			repaint();
 	}
 	
 	public void paint (Graphics g){
-		
+		this.paintComponents(g);
 	}
 	
 	
