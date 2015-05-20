@@ -1,4 +1,7 @@
 1. Easy to use GUI
-2. Auto-scaling window
+2. Scaling window locked at 4:3 ratio
 3. Reset Button
 4. Updates graph live as changes are made
+5. Other visual representations of the data
+6. Ability to update aspects of the function
+7. 
