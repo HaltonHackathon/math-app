@@ -71,14 +71,5 @@ public class Graph extends ApplicationFrame
 		chart.pack( );
 		RefineryUtilities.centerFrameOnScreen( chart );
 		chart.setVisible( true );
-		
-		Graph chart2 = new Graph(
-				"Bunnies Vs Years" ,
-				"Numer of Bunnies vs Years"
-				);
-
-		chart2.pack( );
-		RefineryUtilities.centerFrameOnScreen( chart );
-		chart2.setVisible( true );
 	}
 }
