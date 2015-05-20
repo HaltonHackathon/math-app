@@ -34,7 +34,7 @@ public class mainClass extends JApplet implements ComponentListener{
 	
 	protected void setDim(){
 		d = new Dimension(800, 600);
-		graph.setBounds(0, 0, (int)d.getWidth(), (int)d.getHeight()*2/3);
+		
 		value.setBounds( 0, (int)d.getHeight()*2/3, (int)d.getWidth()/2, (int)d.getHeight()/3);
 		buttons.setBounds((int)d.getWidth()/2, (int)d.getHeight()*2/3, (int) d.getWidth()/2, (int)d.getHeight()/3 );
 		
@@ -63,23 +63,27 @@ public class mainClass extends JApplet implements ComponentListener{
 			DecimalFormat decimalFormat = (DecimalFormat) numberFormat;
 			decimalFormat.setGroupingUsed(false);
 			
+			JFormattedTextField a = new JFormattedTextField(decimalFormat), m = new JFormattedTextField(decimalFormat), 
+					x = new JFormattedTextField(decimalFormat), c = new JFormattedTextField(decimalFormat), k = new JFormattedTextField(decimalFormat);
+			
+			
 			value.add(new JLabel("Graph values -->"));
 			value.add(new JLabel("y =(a) m ^ (x - c) + k "));
 			
 			value.add(new JLabel("a = "));
-			value.add(new JFormattedTextField(decimalFormat));
+			value.add(a);
 			
 			value.add(new JLabel("m = "));
-			value.add(new JFormattedTextField(decimalFormat));
+			value.add(m);
 			
 			value.add(new JLabel("x = "));
-			value.add(new JFormattedTextField(decimalFormat));
+			value.add(x);
 			
 			value.add(new JLabel("c = "));
-			value.add(new JFormattedTextField(decimalFormat));
+			value.add(c);
 			
 			value.add(new JLabel("k = "));
-			value.add(new JFormattedTextField(decimalFormat));
+			value.add(k);
 			
 			
 			graph.setVisible(true);
