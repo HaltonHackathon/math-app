@@ -1,10 +1,14 @@
+Must Have:
+1. Reset Button
+2. Live graph updates as changes are made
+3. >1 Visual representation
+4. Multi-platform compatibility*
+5. Ability to change individual variables of the function
+
+Would Improve Software:
 1. Easy to use GUI
-2. Automatic uniform scaling at 4:3 ratio
-3. Reset Button
-4. Updates graph live as changes are made
-5. Other visual representations of the data
-6. Ability to update aspects of the function
-7. Multi-platform compatibility*
-8.
+2. Automatic and uniform scaling at 4:3 ratio
+3. <2 Visual representations of the data
+4. Option to display table of values beside graph
 
 *Since we are coding in Java, it will be compatible with most OSs automatically
