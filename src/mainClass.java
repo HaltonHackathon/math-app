@@ -8,6 +8,8 @@
 
 import java.awt.*;
 import java.awt.event.*;
+import java.text.*;
+import java.util.*;
 
 import javax.swing.*;
 
@@ -57,7 +59,27 @@ public class mainClass extends JApplet implements ComponentListener{
 			buttons.add(apply);
 			buttons.add(reset);
 			
+			NumberFormat numberFormat = NumberFormat.getNumberInstance(Locale.getDefault());
+			DecimalFormat decimalFormat = (DecimalFormat) numberFormat;
+			decimalFormat.setGroupingUsed(false);
 			
+			value.add(new JLabel("Graph values -->"));
+			value.add(new JLabel("y =(a) m ^ (x - c) + k "));
+			
+			value.add(new JLabel("a = "));
+			value.add(new JFormattedTextField(decimalFormat));
+			
+			value.add(new JLabel("m = "));
+			value.add(new JFormattedTextField(decimalFormat));
+			
+			value.add(new JLabel("x = "));
+			value.add(new JFormattedTextField(decimalFormat));
+			
+			value.add(new JLabel("c = "));
+			value.add(new JFormattedTextField(decimalFormat));
+			
+			value.add(new JLabel("k = "));
+			value.add(new JFormattedTextField(decimalFormat));
 			
 			
 			graph.setVisible(true);
