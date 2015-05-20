@@ -48,9 +48,9 @@ public class mainClass extends JApplet implements ComponentListener{
 			main.add(buttons);
 			main.setLayout(null);
 			
-			value.setLayout(new CardLayout());
+			value.setLayout(new GridLayout());
 			
-			
+			value.add(new JLabel (""));
 			
 			buttons.add(apply);
 			buttons.add(reset);
