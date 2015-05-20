@@ -32,15 +32,13 @@ public class mainMethod extends JApplet implements ComponentListener{
 			main.add(value);
 			main.add(buttons);
 			main.setLayout(null);
-<<<<<<< HEAD
+
 			
 			graph.setBackground(Color.BLUE);
 			value.setBackground(Color.GREEN);
 			buttons.setBackground(Color.RED);
 			setDim();
-=======
-//			graph.setBounds(0, 0, width, height);
->>>>>>> origin/master
+
 			
 			main.addComponentListener(new ComponentListener(){
 				public void componentResized(ComponentEvent e){
@@ -76,14 +74,12 @@ public class mainMethod extends JApplet implements ComponentListener{
 	
 	
 	public static void main (String[] args){
-<<<<<<< HEAD
-		
-=======
+
 		Toolkit tk = Toolkit.getDefaultToolkit();
 	    Dimension d = tk.getScreenSize();
 	    System.out.println("Screen width = " + d.height*4/3);
 	    System.out.println("Screen height = " + d.height);
->>>>>>> origin/master
+
 	    
 	    run(new mainMethod(), d.height*4/3, d.height);
 	}
