@@ -17,11 +17,16 @@ public class mainMethod extends JApplet {
 	}
 	
 	public static void main (String[] args){
-		run(new mainMethod(), 800, 600);
+		Toolkit tk = Toolkit.getDefaultToolkit();
+	    Dimension d = tk.getScreenSize();
+	    System.out.println("Screen width = " + d.width);
+	    System.out.println("Screen height = " + d.height);
+	    
+	    run(new mainMethod(), d.height, d.height*4/3);
 	}
 	
 	public static void run(JApplet applet, int width, int height){
-		JFrame frame = new JFrame();
+	    JFrame frame = new JFrame();
 	    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	    frame.getContentPane().add(applet);
 	    frame.setSize(width, height);
