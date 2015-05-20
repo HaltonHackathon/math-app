@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.JFreeChart;
@@ -39,6 +41,7 @@ public class Graph extends ApplicationFrame
 		hor = horizontal;
 		ver = vertical;
 		rate = growth;
+		
 		JFreeChart lineChart = ChartFactory.createLineChart(
 				chartTitle,
 				"Years","Number of Bunnies",
@@ -60,13 +63,22 @@ public class Graph extends ApplicationFrame
 	}
 	public static void main( String[ ] args ) 
 	{
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Starting point: ");
+		double startPoint = sc.nextDouble();
+		System.out.print("Horizontal shift: ");
+		double hor = sc.nextDouble();
+		System.out.print("Vertical shift: ");
+		double ver = sc.nextDouble();
+		System.out.print("Growth rate: ");
+		double rate = sc.nextDouble();
 		Graph chart = new Graph(
 				"Bunnies Vs Years" ,
 				"Numer of Bunnies vs Years",
-				60,
-				0,
-				0,
-				0.46);
+				startPoint,
+				hor,
+				ver,
+				rate);
 
 		chart.pack( );
 		RefineryUtilities.centerFrameOnScreen( chart );
