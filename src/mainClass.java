@@ -102,7 +102,11 @@ public class mainClass extends JApplet implements ComponentListener{
 			
 			reset.addActionListener(new ActionListener() {
 				public void actionPerformed (ActionEvent e){
-			
+					k.setText("");
+					a.setText("");
+					m.setText("");
+					x.setText("");
+					c.setText("");
 				}
 
 				
@@ -163,5 +167,7 @@ public class mainClass extends JApplet implements ComponentListener{
 		// TODO Auto-generated method stub
 		
 	}
+	
+	
 
 }
