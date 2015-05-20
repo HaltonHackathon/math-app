@@ -10,7 +10,9 @@ public class mainMethod extends JApplet {
 			Container main = getContentPane();
 			main.setLayout(null);;
 			
-			
+			main.add(graph);
+			main.add(value);
+			main.add(buttons);
 		
 	}
 	public void paint (Graphics g){
@@ -20,10 +22,10 @@ public class mainMethod extends JApplet {
 	public static void main (String[] args){
 		Toolkit tk = Toolkit.getDefaultToolkit();
 	    Dimension d = tk.getScreenSize();
-	    System.out.println("Screen width = " + d.width);
+	    System.out.println("Screen width = " + d.height*4/3);
 	    System.out.println("Screen height = " + d.height);
 	    
-	    run(new mainMethod(), d.height, d.height*4/3);
+	    run(new mainMethod(), d.height*4/3, d.height);
 	}
 	
 	public static void run(JApplet applet, int width, int height){
