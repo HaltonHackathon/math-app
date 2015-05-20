@@ -1,0 +1,4 @@
+1. Easy to use GUI
+2. Auto-scaling window
+3. Reset Button
+4. Updates graph live as changes are made
