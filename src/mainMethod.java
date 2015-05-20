@@ -4,14 +4,25 @@ import java.awt.event.*;
 import javax.swing.*;
 
 public class mainMethod extends JApplet implements ComponentListener{
+	
+	public mainMethod(){
+		setDim();
+	}
+	
+	
 	protected JPanel graph = new JPanel(), value = new JPanel(), buttons = new JPanel();
 	
 	Toolkit tk = Toolkit.getDefaultToolkit();
 	protected static Dimension d;
-	
 	protected void setDim(){
-		d = tk.getScreenSize();
-		System.out.println("Width = " + d.getWidth() + " + Height = " + d.getHeight());
+		d = new Dimension(1280, 800);
+		graph.setBounds(0, 0, (int)d.getWidth(), (int)d.getHeight()*2/3);
+		value.setBounds( 0, (int)d.getHeight()*2/3, (int)d.getWidth()/2, (int)d.getHeight()/3);
+		buttons.setBounds((int)d.getWidth()/2, (int)d.getHeight()*2/3, (int) d.getWidth()/2, (int)d.getHeight()/3 );
+	}
+	protected void setDim(double height, double width){
+		
+		
 	}
 	
 	
@@ -22,11 +33,16 @@ public class mainMethod extends JApplet implements ComponentListener{
 			main.add(buttons);
 			main.setLayout(null);
 			
-//			graph.setBounds(0, 0, width, height);
+			graph.setBackground(Color.BLUE);
+			value.setBackground(Color.GREEN);
+			buttons.setBackground(Color.RED);
+			setDim();
 			
 			main.addComponentListener(new ComponentListener(){
 				public void componentResized(ComponentEvent e){
-					setDim();
+					double height = main.getHeight();
+					double width = main.getWidth();
+					setDim(height, width);
 				}
 
 				@Override
@@ -56,8 +72,6 @@ public class mainMethod extends JApplet implements ComponentListener{
 	
 	public static void main (String[] args){
 		
-	    System.out.println("Screen width = " + d.width);
-	    System.out.println("Screen height = " + d.height);
 	    
 	    run(new mainMethod(), (int) d.getWidth(), (int) d.height*4/3);
 	}
